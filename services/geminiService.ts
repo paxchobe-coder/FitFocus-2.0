@@ -2,7 +2,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { Measurement, Goal, MealType, FoodEntry, HealthProfile } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 export const getMotivationalMessage = async (
   current: Measurement,
